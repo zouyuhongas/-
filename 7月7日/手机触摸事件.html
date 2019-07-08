@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    widows: 200px;
+    height: 200px;
+    background: pink;
+}
+
+</style>
+<body>
+    <div class="box"></div>
+</body>
+<script>
+
+    let box = document.querySelector('.box');
+
+    let starTime = 0;
+    let startX = 0;
+    let startY = 0;
+
+    element.addEventListener ('touchstart',function(e){
+        if(e.touches.length !==1){
+            console.log('不是单指操作');
+            return;
+        }
+        // 记录开始时间
+        starTime = Date.now();
+        // 记录开始位置
+        startX = e.touches[0].pageX;
+        startY = e.touches[0].pageY;
+
+    })
+    element.addEventListener('touchend',function(e){
+        // 是否单指操作
+        if(e.changedTouches.length !== 1){
+            console.log('不是单指操作');
+            return;
+        }
+        let endTime = Date.now();
+        // 算出开始结束的间隔,判断
+        if(endTime - starTime >span){
+            console.log('按的时间太长了');
+            return;
+
+        }
+        // 记录结束位置
+        let endX = e.changedTouches[0].pageX;
+        let endY = e.changedTouches[0].pageY;
+        // 算出偏差
+        if(Math.sbs(startX- endX)>offset || Math.abs(startY- endY)> offset){
+            console.log('位置偏差太大了');
+            return;
+        }
+        console.log('这是一个单击操作');
+        callback && callback();
+    })
+
+
+</script>
+</html>
