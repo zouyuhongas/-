@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</body>
+<script src="./jQuery.my.js"></script>
+<script>
+/*
+  学习了原型，我们发现好多的方法，都是放在原型链上面，学会使用原型链进行代码的封装
+
+    封装一个简易的jquery
+
+      功能：
+        1.$() 选择器功能
+        2.实现css方法
+        3.实现类样式操作
+        4.
+*/
+let box = $('.box');
+console.log(box);
+box.css('width',200);
+
+
+</script>
+</html>
